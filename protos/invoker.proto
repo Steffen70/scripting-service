@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package steffen70.invoker;
+
+option csharp_namespace = "Steffen70.Invoker";
+
+import "common/common.proto";
+
+message InvokeRequest {
+    string script_name = 1;
+    steffen70.invoker.common.DemoScriptContext context = 2;
+}
+
+service Invoker {
+    rpc InvokeScript(InvokeRequest) returns (steffen70.invoker.common.DemoScriptResult);
+}

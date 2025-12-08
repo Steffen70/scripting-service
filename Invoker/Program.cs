@@ -59,6 +59,8 @@ public class Program
 
         builder.Services.AddGrpc();
 
+        builder.Services.AddScoped<ScriptExecutor>();
+
         var app = builder.Build();
 
         // Configure the HTTP request pipeline.

@@ -27,9 +27,18 @@
     </Target>
 
     <ItemGroup>
+        <Protobuf Include="..\protos\**\*.proto" GrpcServices="Server" ProtoRoot="..\protos"/>
+    </ItemGroup>
+
+    <ItemGroup>
         <Content Include="..\cert\localhost.pfx">
             <CopyToOutputDirectory>Always</CopyToOutputDirectory>
             <Link>cert\localhost.pfx</Link>
+        </Content>
+        <!-- copy ../script_root and all subdirs -->
+        <Content Include="..\script_root\**\*">
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+            <Link>script_root\%(RecursiveDir)%(Filename)%(Extension)</Link>
         </Content>
     </ItemGroup>
 

@@ -1,0 +1,7 @@
+!generated/
+generated/*
+!generated/__init__.py
+
+!generated/common/
+generated/common/*
+!generated/common/__init__.py

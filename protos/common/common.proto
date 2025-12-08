@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package steffen70.invoker.common;
+
+option csharp_namespace = "Steffen70.Invoker.Common";
+
+message DemoScriptContext {
+    string input_data = 1;
+}
+
+message DemoScriptResult {
+    string output_data = 1;
+    string exception = 2;
+}
