@@ -1,0 +1,39 @@
+# Build artifacts
+bin/
+obj/
+publish/
+wwwroot/
+build-*/
+generated/
+__pycache__/
+
+# IDE files
+.idea/
+.vs/
+.github/
+**/Properties/launchSettings.json
+*.user
+*.editorconfig
+*.log
+global.json
+
+# TFS binding files
+*.vspscc
+*.vssscc
+*.svcmap
+*.svcinfo
+
+# Packages (NuGet)
+packages/
+!packages/repositories.config
+
+# Node.js modules
+node_modules/
+
+# Database files
+*.db
+
+# Archives
+*.zip
+*.7z
+*.tar.*
