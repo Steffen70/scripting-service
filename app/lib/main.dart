@@ -1,20 +1,29 @@
-import 'package:flutter/material.dart';
+import "package:app/app.dart";
+import "package:flutter/material.dart";
+import "package:get/get.dart";
 
 void main() {
-  runApp(const MainApp());
+  runApp(const MyApp());
 }
 
-class MainApp extends StatelessWidget {
-  const MainApp({super.key});
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
 
   @override
-  Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: Scaffold(
-        body: Center(
-          child: Text('Hello World!'),
-        ),
+  Widget build(final BuildContext context) {
+    return GetMaterialApp(
+      title: "Scripting Demo",
+      debugShowCheckedModeBanner: false,
+      translations: AppTranslations(),
+      locale: Get.deviceLocale,
+      fallbackLocale: const Locale("en", "US"),
+      theme: ThemeData(
+        useMaterial3: true,
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.blue, brightness: Brightness.light),
+        appBarTheme: const AppBarTheme(centerTitle: true, elevation: 2),
       ),
+      themeMode: ThemeMode.system,
+      home: const HomeView(),
     );
   }
 }

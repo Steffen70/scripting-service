@@ -4,6 +4,7 @@ package steffen70.invoker;
 
 option csharp_namespace = "Steffen70.Invoker";
 
+import "google/protobuf/empty.proto";
 import "common/common.proto";
 
 message InvokeRequest {
@@ -12,5 +13,6 @@ message InvokeRequest {
 }
 
 service Invoker {
+    rpc Ping(google.protobuf.Empty) returns (google.protobuf.Empty);
     rpc InvokeScript(InvokeRequest) returns (steffen70.invoker.common.DemoScriptResult);
 }

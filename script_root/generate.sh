@@ -6,9 +6,9 @@ OUTDIR="$DIR/generated"
 
 # Create or clean the output directory
 if [ -d "$OUTDIR" ]; then
-    rm -f "$OUTDIR"/**/*pb2*
-# else
-#     mkdir -p "$OUTDIR"
+  rm -f "$OUTDIR"/**/*pb2*
+else
+  mkdir -p "$OUTDIR"
 fi
 
 # Generate Python protobufs

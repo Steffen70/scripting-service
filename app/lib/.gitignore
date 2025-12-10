@@ -1,0 +1,7 @@
+!generated/
+generated/*
+!generated/generated.dart
+
+!generated/common/
+generated/common/*
+!generated/common/common.dart
